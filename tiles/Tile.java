@@ -16,4 +16,12 @@ public class Tile
     {
         return linkedChar + " - " + points;
     }
+
+    public char getLinkedChar() {
+        return linkedChar;
+    }
+
+    public int getPoints() {
+        return points;
+    }
 }

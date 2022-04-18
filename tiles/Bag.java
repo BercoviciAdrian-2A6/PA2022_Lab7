@@ -17,9 +17,9 @@ public class Bag
         {
             int tileVal = rand.nextInt(10) + 1;
 
-            for (int tileCounter = 1; tileCounter <= 1; tileCounter++)
+            for (int tileCounter = 1; tileCounter <= 10; tileCounter++)
             {
-                tiles.add( new Tile((char) (letter + 'A'), tileVal) );
+                tiles.add( new Tile((char) (letter + 'a'), tileVal) );
             }
         }
     }
@@ -43,6 +43,16 @@ public class Bag
         }
 
         return requested;
+    }
+
+    public static void returnTiles(ArrayList<Tile> returnedTiles)
+    {
+        tiles.addAll(returnedTiles);
+    }
+
+    public static int getRemainingTiles()
+    {
+        return tiles.size();
     }
 
     public static void debugPrint()
